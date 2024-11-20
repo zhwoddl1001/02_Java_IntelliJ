@@ -7,22 +7,31 @@ public class LoofRun {
     //void 메서드 main 메서드 return 메서드 내부에 작성해줘야 함
     public static void main(String[] args) {
     LoofEx l = new LoofEx();
-   // l.method1();
+        LoofRun run = new LoofRun(); // LoofRun의 인스턴스를 생성
+        run.abc(); // abc 메서드 호출
+
+        // l.method1();
        // l.method2();
        // l.method3();
         //l.method4();
+
 
         LoofEx2 l2 = new LoofEx2();
        // l2.while1();
        //  l2.while2();
        // l2.while3();
-        l2.while4();
+       // l2.while4();
+        LoofDoWhile ldx = new LoofDoWhile();
+       // ldx.method();
+
 
     }
-    public void abc(){
+
+    public void abc() {
         LoofEx l = new LoofEx();
-        l.method1();
+        l.method1(); // LoofEx의 method1() 호출
     }
+
    /*
     LoofEx l = new LoofEx();
     l.method1()

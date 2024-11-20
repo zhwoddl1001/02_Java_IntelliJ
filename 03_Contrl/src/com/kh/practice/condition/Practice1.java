@@ -144,8 +144,26 @@ public class Practice1 {
         }
     }
 
+    public void method6() {
+        System.out.print("사용자 권한을 입력하세요.(관리자,회원, 비회원) :");
+        String role = sc.next();
+        if ("관리자".equals(role)) {
+            System.out.println("회원관리, 게시글 관리, 게시글 작성, 게시글 조회, 댓글 작성이 가능합니다");
+        } else if ("회원".equals(role)) {
+            System.out.println("게시글 작성, 게시글 조회, 댓글 작성이 가능하고");
+        } else if ("비회원".equals(role)) {
+            System.out.println("게시글 조회만 가능합니다.");
+        } else {
+            System.out.println("입력이 잘못되었습니다.");
+        }
+
+
+    }
+
     public void method10() {
-        while (true) {
+        boolean isTrue = true;
+        while (isTrue) {
+
             System.out.println("***실행할 기능을 선택하세요***");
             System.out.println("1. 메뉴 출력");
             System.out.println("2. 짝수/홀수");
@@ -160,7 +178,7 @@ public class Practice1 {
             System.out.print("선택 : ");
 
             int choice = sc.nextInt(); //사용자가 번호를 선택하도록 입력하는 공간 작성
-
+            sc.nextLine();//한 줄 공백이 있을 경우 날림 처리
             //선택한 번호에 따른 기능 실행
             switch (choice) {
                 case 1:
@@ -179,8 +197,11 @@ public class Practice1 {
                 case 5:
                     method5();
                     break;
-                case 3:
                 case 6:
+                    method6();
+                    break;
+                case 3:
+
                 case 7:
                 case 8:
                 case 9:
@@ -188,8 +209,9 @@ public class Practice1 {
                     break;
                 case 0:
                     System.out.println("프로그램을 종료합니다.");
+                    isTrue = false;
                     //while 옆에 true로 적힌 부분을 변수 isTrue에 담아서
-                    //추후에 is True = false 로 표현해서 종료하게 만들기
+                    //추후에 isTrue = false 로 표현해서 종료하게 만들기
                     break;
                 default:
                     System.out.println("잘못된 입역입니다. 다시 선택해주세요.");

@@ -57,6 +57,9 @@ public class ArrayPre1 {
         //문자열.length() : 문자열의 길이를 반환하는 메서드
         //배열.length() : 배열 길이를 반환하는 필드
         int len = input.length();
+        //for(  초기식   ;    조건식 true일때 {}안에있는 코드실행  ;  초기식의 변수를 증가 또는 감소      )
+       // System.out.println(input.length());
+       // System.out.println(len); 사용자가 입력한 길이(자릿수)
         for (int i = 0; i < len; i++) {
             //성별 부분 전 까지느 ㄴ그대로 배열에 저장
             //index = 7까지느 그대로 넣어주기

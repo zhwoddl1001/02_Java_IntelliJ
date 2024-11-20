@@ -7,6 +7,7 @@ public class AraatyPreRun {
     //arrayPre1.preactice3();
    // arrayPre1.preactice4();
     //arrayPre1.preactice6();
-    arrayPre1.preactice6A();
+    //arrayPre1.preactice6A();
+    arrayPre1.preactice6B();
     }
 }

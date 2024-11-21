@@ -12,7 +12,7 @@ public class Void메서드실행 {
         //method4의 경우 String, int 순서대로 값을 넣어주겠다 표기를 해놓았기 때문에
         //1번 자리에는 String과 같은 문자열이 들어가야함
         //2번 자리에는 int와 같은 정수형이 들어가야함
-        v1.method4(name:"박철수",age:50);
+        v1.method4("박철수",50);
 
         String id = "kht";
         String pw = "kht123";

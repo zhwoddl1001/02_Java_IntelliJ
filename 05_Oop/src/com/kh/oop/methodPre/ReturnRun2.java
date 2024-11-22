@@ -6,9 +6,14 @@ public class ReturnRun2 {
         System.out.println(r2.in("홍길동",40));
         System.out.println(r2.compare(123,456));
         System.out.println(r2.grade(95));
-        System.out.println(r2.Totalprice(100000,20));
+        System.out.println(r2.Totalprice1(100000,20));
 
         System.out.println(r2.practice6(17));
         System.out.println(r2.practice7("Hello,Word","Hello World"));
+
+        String arr[] = {"apple","banana","cherry"};
+        r2.practice8(arr,"banana");
+        System.out.println(r2.practice8(arr,"banana"));
+        System.out.println(r2.practice9(5));
     }
 }

@@ -37,13 +37,23 @@ public class ReturnPre2 {
         }
     }
 
-    public String Totalprice(int price,int discountRate ){
-        return "원래 가격:"+price+ "할인율:"+discountRate+"% 최종 금액: " + price * discountRate/100;
+    public String Totalprice1(double price,double discountRate ){
+        double totalprice = price- (price*discountRate/100);
+        return "원래 가격:"+price+ "할인율:"+discountRate+"% 최종 금액: " + totalprice + "원";
     }
 
    /* public String practice5(){
 
     }*/
+
+   /*
+    삼항 연산자를 이용한 나이 표현법
+    public String method(int age){
+      //return  (age>=19)? "성인입니다." : "미성년자입니다.";
+      String result =  (age>=19)? "성인입니다." : "미성년자입니다.";
+      return "나이 :" + age +"결과 :"+result;
+    }
+    */
 
     public String practice6(int age ){
         if(age>19){
@@ -53,6 +63,36 @@ public class ReturnPre2 {
         }
     }
     public String practice7(String str1,String str2 ){
-        return str1+str2;
+       // return str1+str2;
+       // return "첫 번째로 입력된 문자열: "+str1+"\n두 번째로 입력된 문자열 :" +str2 + "\n위 두 문자열을 이어 붙인 결과" +str1 + str2;
+       String result = str1 +str2;
+        return "첫 번째로 입력된 문자열: "+str1+"\n두 번째로 입력된 문자열 :" +str2 + "\n위 두 문자열을 이어 붙인 결과" +result;
+    }
+
+        // 8. 특정 문자열이 배열에 존재하는지 확인후 결과 반환
+    public String practice8(String[] arr,String target ){
+        // 값이 존재하는지 확인하는 boolean 자료형 변수명을 생성
+        boolean found = false; // 갑싱 존재하는지 확신할 수 없기 때문에 false로 설정
+
+        //존재하는지 확인하기 위한 여정
+        for(String str : arr){
+            if(str.equals(target)){
+                found = true;
+                break;
+            }
+        }
+        //존재유무를 모두 확인
+        if(found){//만약에 존재한다면
+            return "배열에" + target + "이(가) 존재합니다.";
+        }else {
+            return "배열에" + target + "이(가) 존재하지 않습니다.";
+
+        }
+    }
+
+    //9. 반지름을 입력받아 원의 넓이 반환
+    public String practice9(double radius){
+        double area = Math.PI * radius * radius;
+        return "반지름 :" + radius + "원의 넓이" + area;
     }
 }

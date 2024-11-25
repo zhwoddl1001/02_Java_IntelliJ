@@ -12,9 +12,13 @@ public class Cafe {
     }
 
     //2.필수생성자
-    public Cafe(String name, int price, int quantity) {
 
+    public Cafe(String name, int price, int quantity) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
     }
+
     //3.Setter
 
     public void setName(String name) {

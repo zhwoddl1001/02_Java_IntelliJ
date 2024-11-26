@@ -65,4 +65,31 @@ public class BookService {
         System.out.println(list1);
         System.out.println("list1의 저장된 값의 개수"+list1.size()); // 총 개수 세기
     }
+
+    //책을 추가할 수 있도록
+    private ArrayList<Book> bookList = new ArrayList<>();
+    //한번에 책이름, 저자 ,가격을 저장하고 볼 수 있도록 설정
+
+    //1. 책 추가하기 기능 만들자!
+    public void addBook(String title, String author, int price){
+        //Book b1 =  new Book("책제목","저자",가격);
+        // 하나씩 직접적으로 넣어줬다면
+        // 고객이 입력한 값을 전달받아서 저장하겠다 설정
+        Book b1 = new Book(title, author, price);
+        bookList.add(b1);
+        //bookList.add(new Book(title, author, price)); = 78번째 줄과 돌일
+
+
+
+
+        System.out.println(bookList);
+        System.out.println("책이 성공적으로 추가되었습니다.");
+    }
+
+    //3. 저장된 책을 모두 확인하기
+    //                Book  =   책제목,                저자,              가격         = 하나의 세트
+    // index 0번에 저장된 값들 = {title = '나는책이다.', author = 'KHT', price=30000}
+    public ArrayList<Book> getBookList(){
+        return bookList; //get 가지고 있는 모든 책 리스트를 호출해서 전달하기
+    }
 }

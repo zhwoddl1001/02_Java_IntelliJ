@@ -85,5 +85,19 @@ public class ArrayListPre1 {
         charList.add('나');
         System.out.println("CharList : "+charList);
 
+        //3.논리 타입 제한 true false 저장 리스트에 저장
+        //boolList
+        ArrayList<Boolean> bollList = new ArrayList<Boolean>();
+        bollList.add(true);
+        bollList.add(false);
+        System.out.println("bollList : "+bollList);
+
+        //4.실수(double) 타입 제한 doubleList
+        //1.5 3.14
+        ArrayList<Double> doubleList = new ArrayList<Double>();
+        doubleList.add(1.5);
+        doubleList.add(3.14);
+        System.out.println("doubleList : "+doubleList);
+
     }
 }

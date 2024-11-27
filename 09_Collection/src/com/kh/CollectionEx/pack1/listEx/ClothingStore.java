@@ -28,6 +28,25 @@ public class ClothingStore {
       }
 
 
+      }
+
+      //옷 제거 기능
+public void removeClothing(){
+
+        boolean found = false;
+
+        for(int i = 0; i < clothingList.size(); i++) {
+            if(clothingList.get(i).getName().equals(clothingList.get(i).getCategory())) {
+                clothingList.remove(i);
+                System.out.println("옷이 성공적으로 제거 되었습니다."+clothingList.get(i).getName());
+                found = true;
+                break;
+            }
+        }
+        if(!found){
+            System.out.println("옷을 찾기 못했습니다.");
+        }
+}
 
 
 
@@ -36,4 +55,4 @@ public class ClothingStore {
 
 
 
-}
+

@@ -11,7 +11,8 @@ public class ClothingStoreRun {
             System.out.println("\n --- 쇼핑몰 옷 관리 프로그램 ---");
             System.out.println("1.옷 추가");
             System.out.println("2.옷 목록 조회");
-            System.out.println("3.프로그램 종료");
+            System.out.println("3.옷 제거 기능");
+            System.out.println("4.프로그램 종료");
             System.out.println("메뉴 선택 : ");
             int choice = sc.nextInt();
             sc.nextLine(); // int 에 남아있는 잔여 줄바꿈 지우기
@@ -38,7 +39,12 @@ public class ClothingStoreRun {
 
 
                     break;
-                case 3://프로그램 종료
+                    case 3:
+                        System.out.println("\n===옷 제거===");
+                        System.out.print("제거하고자 하는 옷의 이름을 입력하세요");
+                        String Name = sc.nextLine();
+                        clothingStore.removeClothing();
+                case 4://프로그램 종료
                     System.out.println("프로그램종료 합니다.");
                     return;
                 default:// 잘못 입력

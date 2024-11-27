@@ -40,6 +40,7 @@ public class BookServiceRun {
                     System.out.println("\n===책 제거===");
                     System.out.print("제거하고자 하는 책의 이름을 입력하세요");
                     String removeTitle = scanner.nextLine();
+                    bookService.removeBook(removeTitle);
 
 
                     //만약에 책 제목이 존재한다면 책을 삭제했습니다.

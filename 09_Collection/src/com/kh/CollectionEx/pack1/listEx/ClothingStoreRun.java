@@ -36,13 +36,8 @@ public class ClothingStoreRun {
                 case 2://목록 조회하는 기능
                     System.out.println("===추가된 옷 목록===");
                     clothingStore.allClothing();
-
-
                     break;
                     case 3:
-                        System.out.println("\n===옷 제거===");
-                        System.out.print("제거하고자 하는 옷의 이름을 입력하세요");
-                        String Name = sc.nextLine();
                         clothingStore.removeClothing();
                 case 4://프로그램 종료
                     System.out.println("프로그램종료 합니다.");

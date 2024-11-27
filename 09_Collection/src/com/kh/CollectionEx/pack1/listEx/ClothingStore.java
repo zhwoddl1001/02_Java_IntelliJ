@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class ClothingStore {
 
     private ArrayList<Clothing> clothingList = new ArrayList<>();
+    private Scanner scanner = new Scanner(System.in);
 
     //옷 추가 기능
     public void  addClothing(String name, String category, String price) {
@@ -32,17 +33,26 @@ public class ClothingStore {
 
       //옷 제거 기능
 public void removeClothing(){
+    // Book이랑 다르게 제거하고자 하는 책제목을 Run에서 입력하는 것이 아니라 기능클래스에서 작성한 버전
+    // 결과는 같지만 결과에 도달하는 방법이 다름을 표현
 
         boolean found = false;
 
         for(int i = 0; i < clothingList.size(); i++) {
+            System.out.println("\n===옷 제거===");
+            System.out.print("제거하고자 하는 옷의 이름을 입력하세요");
+            String name = scanner.nextLine(); //제거하고자 하는 옷의 이름을 작성
             if(clothingList.get(i).getName().equals(clothingList.get(i).getCategory())) {
                 clothingList.remove(i);
-                System.out.println("옷이 성공적으로 제거 되었습니다."+clothingList.get(i).getName());
+                System.out.println("옷이 성공적으로 제거 되었습니다."+name);
                 found = true;
                 break;
             }
         }
+    //위 for문 코드에서는 만약에 삭제하고자 하는 옷이름과 옷목록리스트에 작성된 옷이름이 일치하다면 삭제를 한 상태
+
+    // 아래 if문 코드에서는 옷이름을 검색했을 때 검색한 옷이름이 없다면 옷을 찾을 수 없다라는 표기를 작성해줘야지
+    // 유저들이 옷이 없구나~ 하는 것을 알 수 있음
         if(!found){
             System.out.println("옷을 찾기 못했습니다.");
         }

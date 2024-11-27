@@ -92,6 +92,10 @@ public class BookService {
         boolean found = false; // 책 삭제 여부를 확인 변수 아직 책을 찾거나 삭제한 상태가 아니기 때문에 false
 
         for(int i =0; i<bookList.size(); i++){
+             /*
+             책목록에서      가져온index번호에    적혀있는 책제목에서     내가찾고자하는것과 똑같은것이 존재한다면      책제목
+             bookList          .get(i)           .getTitle()               .equals                                       (title)
+             */
             if(bookList.get(i).getTitle().equals(title)){
                 bookList.remove(i);
                 System.out.println("책이 성공적으로 삭제 되었습니다" + title);
@@ -100,9 +104,11 @@ public class BookService {
 
             }
         }
-        //원하는 책 제목을 찾지 못했다면 해당하는 책 제목으 찾을 수 없습니다. 보여주기
-        if(found == false){ //!found 와 found === false
-            System.out.println("해당 책을 찾을 수 없습니다." + title);
+        //원하는 책 제목을 찾지 못했다면 해당하는 책 제목을 찾을 수 없습니다. 보여주기
+        //  found == false 책을 찾지 못한게 맞을 경우 = true
+        //   found == false 줄여서 !found
+        if(!found){ // found == false
+            System.out.println("해당 제목의 책을 찾을 수 없습니다. : " + title);
         }
     }
 

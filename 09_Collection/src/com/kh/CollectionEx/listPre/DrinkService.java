@@ -45,6 +45,17 @@ public class DrinkService {
     //같은 메서드 일때 자료형이 다르기 때문에 오버로드 사용하기
     //5. 음료 특정 음료 검색
     public void searchDrink(String name) {
+        for (int i = 0; i < drinks.size(); i++) {
+            if (drinks.get(i).getName().equals(name)) { //우리가 검색하고자하는 음료이름이 있다면
+                System.out.println(drinks.get(i).toString()); //음료 정보 출력하기
+            } else {
+                System.out.println("상품명과 일치하는 음료가 없습니다.");
+            }
+        }
+    }
+   /*
+    public void searchDrink(String name) {
+
         for (Drink d : drinks) {
             if (d.getName().equals(name)) {//우리가 검색하고자하는 음료이름이 있다면
                 System.out.println(d);     //음료 정보 출력하기
@@ -53,9 +64,18 @@ public class DrinkService {
             }
         }
     }
-
+*/
     //6. Drink 음료 특정 음료 검색-> 가격을 통해 검색
     public void searchDrink(int price) {
+        for (int i = 0; i < drinks.size(); i++) {
+            if (drinks.get(i).getPrice() == price) { //우리가 검색하고자 하는 음료 가격이 있다면
+                System.out.println(drinks.get(i).toString());  //가격에 맞는 음료 정보를 출력
+            } else {
+                System.out.println("가격이 일치하는 음료가 없습니다.");
+            }
+        }
+    }
+    /* public void searchDrink(int price) {
         for (Drink d : drinks) {
             if (d.getPrice() == price) { //우리가 검색하고자하는 음료 가격이 잇다면
                 System.out.println(d);    // 음료 정보 출력하기
@@ -63,5 +83,5 @@ public class DrinkService {
                 System.out.println("가격이 일치하는 음료가 없습니다.");
             }
         }
-    }
+    }*/
 }

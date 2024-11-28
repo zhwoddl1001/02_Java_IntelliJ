@@ -45,9 +45,11 @@ public class DrinkService {
     //같은 메서드 일때 자료형이 다르기 때문에 오버로드 사용하기
     //5. 음료 특정 음료 검색
     public void searchDrink(String name) {
+        boolean found = false; //음료를 찾았는지 여부를 저장하는변수
         for (int i = 0; i < drinks.size(); i++) {
             if (drinks.get(i).getName().equals(name)) { //우리가 검색하고자하는 음료이름이 있다면
                 System.out.println(drinks.get(i).toString()); //음료 정보 출력하기
+                found = true;
             } else {
                 System.out.println("상품명과 일치하는 음료가 없습니다.");
             }

@@ -27,9 +27,11 @@ public class BookMenu {
 
     //3.도서 검색 기능
     public void searchBook(String title){
+        boolean found = false;
         for(Book1 b : bk1){
             if(b.getTitle().equals(title)){ //내가 검색한 책 이름과 동일 하다면
                 System.out.println(b);   //그 책을 출력해라
+                found = true;
             }else {
                 System.out.println("일치하는 도서가 없습니다.");
             }

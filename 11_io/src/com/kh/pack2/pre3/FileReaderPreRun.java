@@ -10,6 +10,6 @@ public class FileReaderPreRun {
         FileReaderPre fr = new FileReaderPre();
 
         System.out.println("[" + fileName + "] 읽기 모드를 시작합니다.");
-        fr.readTxt(path,fileName);
+        fr.readTxt();
     }
 }

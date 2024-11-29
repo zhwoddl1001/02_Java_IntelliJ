@@ -9,6 +9,7 @@ public class FileReadWriteRun {
     public static void main(String[] args) {
         FileReadWrite frr = new FileReadWrite();
         //frr.method1();
-        frr.method2();
+        //frr.method2();
+        frr.method3();
     }
 }

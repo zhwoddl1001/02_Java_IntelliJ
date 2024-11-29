@@ -2,9 +2,9 @@ package com.kh.example.preactice7.model.vo;
 
 public class Student {
     //이름 과목 점수
-    String name;
-    String subject;
-    int score;
+    private String name;
+    private String subject;
+    private int score;
 
     public Student() {
     }
@@ -42,11 +42,10 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", subject='" + subject + '\'' +
-                ", score=" + score +
-                '}';
+        return
+                "이름 : " + name + '\'' +
+                ",과목 : " + subject + '\'' +
+                ",점수 : =" + score ;
     }
 
 
